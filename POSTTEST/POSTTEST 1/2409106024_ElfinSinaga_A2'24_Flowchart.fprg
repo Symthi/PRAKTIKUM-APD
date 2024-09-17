@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="POSTTEST"/>
+        <attribute name="authors" value="elsin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-08 04:16:50 AM"/>
+        <attribute name="created" value="ZWxzaW47U1lNVEhJOzIwMjQtMDktMDg7MTI6MDM6MjEgQU07MjI4MA=="/>
+        <attribute name="edited" value="ZWxzaW47U1lNVEhJOzIwMjQtMDktMDg7MDQ6MTY6NTAgQU07MjsyMzk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CicilanperBulan, BungaperBulan, JumlahPinjaman, TahunCicilan, JumlahBulan" type="Integer" array="False" size=""/>
+            <output expression="&quot;Jumlah Pinjaman = Rp17.000.000&quot;" newline="True"/>
+            <assign variable="JumlahPinjaman" expression="17000000"/>
+            <output expression="&quot;input TahunCicilan (tahun)&quot;" newline="True"/>
+            <input variable="TahunCicilan"/>
+            <if expression="TahunCicilan == 1">
+                <then>
+                    <assign variable="BungaperBulan" expression="(0.07/12)*JumlahPinjaman"/>
+                    <assign variable="JumlahBulan" expression="12"/>
+                    <output expression="&quot;Cicilan per Bulan selama 1 Tahun&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="TahunCicilan == 2">
+                        <then>
+                            <assign variable="BungaperBulan" expression="(0.13/24)*JumlahPinjaman"/>
+                            <assign variable="JumlahBulan" expression="24"/>
+                            <output expression="&quot;Cicilan per Bulan selama 2 Tahun&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="TahunCicilan == 3">
+                                <then>
+                                    <assign variable="BungaperBulan" expression="(0.19/36)*JumlahPinjaman"/>
+                                    <assign variable="JumlahBulan" expression="36"/>
+                                    <output expression="&quot;Cicilan per Bulan selama 3 Tahun&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="CicilanperBulan" expression="(JumlahPinjaman+BungaperBulan)/JumlahBulan"/>
+            <output expression="&quot;Total cicilan yang harus dibayar Bu Sari : &quot; &amp; cicilanPerbulan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

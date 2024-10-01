@@ -1,5 +1,5 @@
 nama = "elfin"
-pw = "40"
+pw = "24"
 percobaan = 0
 
 while percobaan < 3:
@@ -30,7 +30,7 @@ while percobaan < 3:
             print(f"atas Nama {nama} dengan NIM {nim} akan melakukan pinjaman sebesar {total_pinjaman} dengan cicilannya sebesar {cicilan_bulanan:.0f}")
             print("<=========================================================================================================================================>")
 
-            mengulang = int(input("Apakah Anda Ingin Mengulang? ketik '1' untuk mengulang atau '2' untuk keluar: "))
+            mengulang = int(input("Apakah Anda Ingin Mengulang? ketik '1' untuk mengulang dan ketik '2' untuk keluar: "))
             if mengulang == 1:
                 pass
             elif mengulang == 2:

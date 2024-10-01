@@ -4,9 +4,9 @@
         <attribute name="name" value="2409106024_Elfin Sinaga_POSTTEST 4"/>
         <attribute name="authors" value="elsin"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-01 09:04:49 PM"/>
+        <attribute name="saved" value="2024-10-01 09:19:43 PM"/>
         <attribute name="created" value="ZWxzaW47U1lNVEhJOzIwMjQtMTAtMDE7MDI6MTI6MDYgUE07MjI4Mg=="/>
-        <attribute name="edited" value="ZWxzaW47U1lNVEhJOzIwMjQtMTAtMDE7MDk6MDQ6NDkgUE07NDsyNDA4"/>
+        <attribute name="edited" value="ZWxzaW47U1lNVEhJOzIwMjQtMTAtMDE7MDk6MTk6NDMgUE07NTsyNDA5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -14,7 +14,7 @@
             <declare name="username, loginusername, nama, nim" type="String" array="False" size=""/>
             <declare name="password, passworduser, cicilanbulanan, bungaperbulan, jumlahperbulan, lamacicilan, jumlahbulan, jumlahpinjaman, percobaan, cobalagi" type="Integer" array="False" size=""/>
             <assign variable="username" expression="&quot;elfin&quot;"/>
-            <assign variable="password" expression="40"/>
+            <assign variable="password" expression="24"/>
             <output expression="&quot;username&quot;" newline="True"/>
             <input variable="loginusername"/>
             <output expression="&quot;Password&quot;" newline="True"/>

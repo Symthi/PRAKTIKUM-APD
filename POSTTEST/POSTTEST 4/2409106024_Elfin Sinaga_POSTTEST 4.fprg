@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106024_Elfin Sinaga_POSTTEST 4"/>
+        <attribute name="authors" value="elsin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 09:04:49 PM"/>
+        <attribute name="created" value="ZWxzaW47U1lNVEhJOzIwMjQtMTAtMDE7MDI6MTI6MDYgUE07MjI4Mg=="/>
+        <attribute name="edited" value="ZWxzaW47U1lNVEhJOzIwMjQtMTAtMDE7MDk6MDQ6NDkgUE07NDsyNDA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="username, loginusername, nama, nim" type="String" array="False" size=""/>
+            <declare name="password, passworduser, cicilanbulanan, bungaperbulan, jumlahperbulan, lamacicilan, jumlahbulan, jumlahpinjaman, percobaan, cobalagi" type="Integer" array="False" size=""/>
+            <assign variable="username" expression="&quot;elfin&quot;"/>
+            <assign variable="password" expression="40"/>
+            <output expression="&quot;username&quot;" newline="True"/>
+            <input variable="loginusername"/>
+            <output expression="&quot;Password&quot;" newline="True"/>
+            <input variable="passworduser"/>
+            <assign variable="percobaan" expression="0"/>
+            <assign variable="cobalagi" expression="1"/>
+            <while expression="not (username == loginusername and password == passworduser)">
+                <assign variable="percobaan" expression="percobaan + 1"/>
+                <output expression="&quot;Username atau Password salah, silahkan coba lagi&quot;" newline="True"/>
+                <if expression="percobaan == 3">
+                    <then>
+                        <assign variable="loginusername" expression="username"/>
+                        <assign variable="passworduser" expression="password"/>
+                        <assign variable="cobalagi" expression="2"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Username&quot;" newline="True"/>
+                        <input variable="loginusername"/>
+                        <output expression="&quot;Password&quot;" newline="True"/>
+                        <input variable="passworduser"/>
+                    </else>
+                </if>
+            </while>
+            <while expression="cobalagi == 1">
+                <output expression="&quot;Login Anda Berhasil&quot;" newline="True"/>
+                <output expression="&quot;Masukkan Nama&quot;" newline="True"/>
+                <input variable="nama"/>
+                <output expression="&quot;Masukkan NIM&quot;" newline="True"/>
+                <input variable="nim"/>
+                <output expression="&quot;Jumlah Pinjaman = Rp17.000.000&quot;" newline="True"/>
+                <assign variable="jumlahpinjaman" expression="17000000"/>
+                <output expression="&quot;Masukkkan Lama Cicilan&quot;" newline="True"/>
+                <input variable="lamacicilan"/>
+                <if expression="lamacicilan == 1">
+                    <then>
+                        <assign variable="bungaperbulan" expression="(0.07 / 12) * jumlahpinjaman"/>
+                        <assign variable="jumlahbulan" expression="12"/>
+                        <output expression="&quot;Cicilan per Bulan selama 1 Tahun&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="lamacicilan == 2">
+                            <then>
+                                <assign variable="bungaperbulan" expression="(0.13 / 24) * jumlahpinjaman"/>
+                                <assign variable="jumlahbulan" expression="24"/>
+                                <output expression="&quot;Cicilan per Bulan selama 2 Tahun&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="lamacicilan == 3">
+                                    <then>
+                                        <assign variable="bungaperbulan" expression="(0.19 / 36) * jumlahpinjaman"/>
+                                        <assign variable="jumlahbulan" expression="36"/>
+                                        <output expression="&quot;Cicilan per Bulan selama 3 Tahun&quot;" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="cobalagi ==  1">
+                    <then>
+                        <assign variable="cicilanbulanan" expression="(jumlahpinjaman + bungaperbulan) / jumlahbulan"/>
+                        <output expression="&quot;atas Nama &quot;&amp;Nama &amp; &quot; dengan NIM &quot;&amp;NIM &amp; &quot; akan pinjaman sebesar &quot;&amp;JumlahPinjaman &amp; &quot; dengan cicilannya sebesar : &quot;&amp;CicilanBulanan" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Apakah ingin kembali ? ketik '1' untuk kembali atau '2' untuk keluar&quot;" newline="True"/>
+                <input variable="cobalagi"/>
+            </while>
+            <output expression="&quot;Sampai Jumpa&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
